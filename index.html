@@ -156,11 +156,11 @@ ul li, ol li {
 	background: url('http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/bg.png');
 }
 
-@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
+/*@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
 	.container {
 		width: 360px !important;
 	}
-}
+}*/
 
 
 /* Set the padding on the td rather than the div for Outlook compatibility */
@@ -175,11 +175,11 @@ ul li, ol li {
 	display: block;
 }
 
-@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
+/*@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
 	.content {
 		width: 360px !important;
 	}
-}
+}*/
 
 /* Let's make sure tables in the content area are 100% wide */
 .content table {
@@ -427,8 +427,8 @@ table {
 							<tr>
 								<td class="padding">
 									<div class="col-full">
-										<div class="part">
-											<h1 class="title">Hai, Ibu Faradita Nelwan!</h1>
+										<div class="part" mc:edit="opening">
+											<h1 class="title">Hai, Ibu *|FNAME|* *|LNAME|*!</h1>
 											<p class="contents">Di usia aktifnya, si Kecil membutuhkan energi yang besar untuk mengenal dunia. Apakah Mum yakin sudah memberikan nutrisi sesuai dengan kebutuhan si Kecil?</p>
 										</div>
 									</div>
@@ -440,7 +440,7 @@ table {
 								<td class="padding">
 									<div class="col-full box">
 										<div class="part">
-											<div class="article">
+											<div class="article" mc:edit="first-article">
 												<h1 class="title article-title">Larinya Tambah Kencang!</h1>
 												<h2 class="title name">TIAVITA HERDIANA <span class="date">| 13 Maret 2015</span></h2>
 												<div class="img">
@@ -452,7 +452,7 @@ table {
 										</div>
 										<div class="article-divider"></div>
 										<div class="part">
-											<div class="article">
+											<div class="article" mc:edit="second-article">
 												<h1 class="title article-title">FRISO News Update!</h1>
 												<h2 class="title name">benny alexandra <span class="date">| 13 Maret 2015</span></h2>
 												<div class="img">
@@ -477,7 +477,7 @@ table {
 										</div>
 										<div class="col-full">
 											<div class="col-half">
-												<div class="part border col-promo">
+												<div class="part border col-promo" mc:edit="first-promo">
 													<h1 class="title pro">Beli Friso harga khusus, hanya di sini!</h1>
 													<div class="part box img-product">
 														<img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/produk1.png" alt="produk1">
@@ -489,7 +489,7 @@ table {
 												</div>
 											</div>
 											<div class="col-half">
-												<div class="part col-promo">
+												<div class="part col-promo" mc:edit="second-promo">
 													<h1 class="title pro">Tukarkan poin di setiap pembelian susu Friso di sini!</h1>
 													<div class="part box img-product">
 														<img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/produk2.png" alt="produk2">
@@ -516,7 +516,7 @@ table {
 										</div>										
 										<div class="part-tips">
 											<img alt="quotation1" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/quotation1.png">
-											<p class="quote">Anak yang tumbuh dengan kenangan indah cenderung lebih bahagia. Jadikan setiap momen bersama si Kecil lebih berarti dari sekarang.</p>
+											<p class="quote" mc:edit="quotation">Anak yang tumbuh dengan kenangan indah cenderung lebih bahagia. Jadikan setiap momen bersama si Kecil lebih berarti dari sekarang.</p>
 											<div id="quotation2">
 												<img alt="quotation2" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/quotation2.png">
 											</div>
@@ -552,7 +552,7 @@ table {
 
 										<p class="footer-content">Pesan ini ditujukan untuk pemilik alamat email <span class="friso email">Kemas.dwisatria@xmgravity.com</span>. Apakah benar email ini ditujukan untuk Anda? 
 										<br><br>
-										<a class="friso reg">Daftarkan diri Anda di sini</a>. Jika Anda tidak berkenan menerima pesan sejenis di kemudian hari, silahkan <a class="friso reg">Batalkan pendaftaran Anda di sini</a>. Email ini berisi link khusus untuk Anda! Sangat disarankan untuk berhati-hati saat mengirimkan email ini ke pihak lain, karena seluruh link yang terkait dengan email ini akan mencakup seluruh data pribadi yang tercantum dalam profil keluarga Anda, termasuk waktu melahirkan, tanggal lahir, dan nama-nama anggota keluarga.
+										<a class="friso reg">Daftarkan diri Anda di sini</a>. Jika Anda tidak berkenan menerima pesan sejenis di kemudian hari, silahkan <a href="*|UNSUB|*" class="friso reg">Batalkan pendaftaran Anda di sini</a>. Email ini berisi link khusus untuk Anda! Sangat disarankan untuk berhati-hati saat mengirimkan email ini ke pihak lain, karena seluruh link yang terkait dengan email ini akan mencakup seluruh data pribadi yang tercantum dalam profil keluarga Anda, termasuk waktu melahirkan, tanggal lahir, dan nama-nama anggota keluarga.
 										<br><br>
 										Website Friso.co.id dan materi-materi publikasi terkait adalah untuk kepentingan informasi semata.
 										<br>
