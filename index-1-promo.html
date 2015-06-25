@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Friso</title>
+<style>
+/* -------------------------------------
+		GLOBAL
+------------------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	line-height: 1.6;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+	width: 100%!important;
+	height: 100%;
+}
+
+
+/* -------------------------------------
+		ELEMENTS
+------------------------------------- */
+a {
+	color: #348eda;
+}
+
+.btn-primary {
+	text-decoration: none;
+	color: #FFF;
+	background-color: #348eda;
+	border: solid #348eda;
+	border-width: 10px 20px;
+	line-height: 2;
+	font-weight: bold;
+	margin-right: 10px;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 25px;
+}
+
+.btn-secondary {
+	text-decoration: none;
+	color: #FFF;
+	background-color: #aaa;
+	border: solid #aaa;
+	border-width: 10px 20px;
+	line-height: 2;
+	font-weight: bold;
+	margin-right: 10px;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 25px;
+}
+
+.last {
+	margin-bottom: 0;
+}
+
+.first {
+	margin-top: 0;
+}
+
+.padding {
+	padding: 8px 24px;
+}
+
+
+/* -------------------------------------
+		BODY
+------------------------------------- */
+table.body-wrap {
+	width: 100%;
+	padding: 0px;
+}
+
+table.body-wrap .container {
+	margin: 0;
+	width: 100%;
+}
+
+
+/* -------------------------------------
+		FOOTER
+------------------------------------- */
+table.footer-wrap {
+	width: 100%;	
+	clear: both!important;
+}
+
+.footer-wrap .container p {
+	font-size: 12px;
+	color: #666;
+}
+
+table.footer-wrap a {
+	color: #999;
+}
+
+
+/* -------------------------------------
+		TYPOGRAPHY
+------------------------------------- */
+h1, h2, h3 {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #000;
+	margin: 40px 0 10px;
+	line-height: 1.2;
+	font-weight: 200;
+}
+
+h1 {
+	font-size: 36px;
+}
+h2 {
+	font-size: 28px;
+}
+h3 {
+	font-size: 22px;
+}
+
+p, ul, ol {
+	font-weight: normal;
+	font-size: 14px;
+}
+
+ul li, ol li {
+	margin-left: 5px;
+	list-style-position: inside;
+}
+
+/* ---------------------------------------------------
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure.
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+	display: block!important;
+	max-width: 600px!important;
+	margin: 0 auto!important; /* makes it centered */
+	clear: both!important;
+	background: url('http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/bg.png');
+}
+
+/* Set the padding on the td rather than the div for Outlook compatibility */
+.body-wrap .container {
+	padding: 0px;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+	max-width: 600px;
+	margin: 0 auto;
+	display: block;
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table {
+	width: 100%;
+}
+
+/* custom css */
+
+table {
+	border-spacing: 0;
+}
+
+.part {
+	padding: 19px;
+	max-width: 600px;
+}
+
+.title {
+	margin: 0;
+	font: bold 28px Helvetica;
+	color: #315ba7;
+}
+
+.article-title {
+	font-size: 23px;
+}
+
+.contents {
+	font-size: 15px;
+	color: #7f6834;
+}
+
+.box {
+	background-color: #fdfdfd;
+	border-radius: 10px;
+	border: solid 1px #d8f8f8;
+	z-index: 4;
+}
+
+.name {
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.date {
+	color: #797876;
+}
+
+.img {
+	padding: 19px 0; 
+}
+
+.content-article {
+	font-size: 14px;
+	color: #5d5c5a;
+}
+
+.read-more {
+	margin-top: 10px;
+}
+
+.article-divider {
+	border-top: solid 1px #d8f8f8;
+}
+
+.padding .col-full .header {
+	padding: 8px 0;
+	color: #fff;
+	text-align: center;
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 21px;
+	z-index: -1;
+	border-radius: 8px 8px 0 0;
+}
+
+/* kolom */
+
+.col-full {
+	width: 100%;
+	float: left;
+}
+
+.col-half {
+	width: 50%;
+	float: left;
+	position: relative;
+}
+
+/* promo */
+.promo {
+	background-color: #2267ab;
+}
+
+.padding .col-full.promo-content {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+#right {
+	float: right;
+}
+
+.border {
+	border-right: solid 1px #d8f8f8;
+}
+
+#article-promo {
+	float: left;
+}
+
+.pro {
+	font-size: 21px;
+	font-weight: normal;
+	padding-bottom: 15px;
+}
+
+.img-product {
+	text-align: center;
+}
+
+.more-info {
+	padding: 10px 0;
+	text-align: center;
+	margin-bottom: 0;
+	min-height: 27px;
+}
+
+.nominal {
+	color: #0180d2;
+	font-weight: bold;
+	font-family: Helvetica;
+	font-size: 18px;
+}
+
+.button-promo {
+	text-align: center;
+}
+
+.btn-promo {
+	border-radius: 10px;
+	background-color: #017bca;
+	font-size: 15px;
+	border: none;
+	font-weight: normal;
+	padding: 2px 45px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/* tips */
+.tips {
+	background-color: #8b6aa7;
+}
+
+.part-tips {
+	padding: 30px 19px;
+}
+
+.quote {
+	font-size: 20px;
+	color: #02639f;
+	padding: 0 40px;
+	font-weight: normal;
+}
+
+#quotation2 {
+	text-align: right;
+}
+
+/* footer*/
+.footer {
+	padding-top: 13px;
+	background-color: #fff;
+}
+
+.footer-part {
+	padding: 19px 19px 60px;
+}
+
+.footer-content {
+	font-size: 12px;
+	color: #5d5c5a;
+}
+
+.padding .col-full .friso {
+	font-size: 15px;
+	color: #02639f;
+}
+
+.padding .col-full .email {
+	font-size: 12px;
+}
+
+.padding .col-full .reg {
+	font-size: 12px;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+</style>
+</head>
+
+<body bgcolor="#fff">
+
+<!-- body -->
+<table class="body-wrap" bgcolor="#fff">
+	<tr>
+		<td></td>
+		<td class="container" bgcolor="#faffff">
+
+			<!-- content -->
+			<div class="content">
+			<table>
+				<tr>
+					<td>
+						<img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/header.png" alt="header.png">
+						<table>
+							<tr>
+								<td class="padding">
+									<div class="col-full">
+										<div class="part">
+											<h1 class="title">Hai, Ibu Faradita Nelwan!</h1>
+											<p class="contents">Di usia aktifnya, si Kecil membutuhkan energi yang besar untuk mengenal dunia. Apakah Mum yakin sudah memberikan nutrisi sesuai dengan kebutuhan si Kecil?</p>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td class="padding">
+									<div class="col-full box">
+										<div class="part">
+											<div class="article">
+												<h1 class="title article-title">Larinya Tambah Kencang!</h1>
+												<h2 class="title name">TIAVITA HERDIANA <span class="date">| 13 Maret 2015</span></h2>
+												<div class="img">
+													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/kid-running.png" class="box">
+												</div>
+												<p class="content-article">Meski bersemangat, ia juga bisa haus dan lelah. Perkuat imunitasnya dengan susu Friso yang mengandung Selenium dan Prebiotik, agar aktivitasnya tak terganggu. </p>
+												<a href="#"><img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/read-more.png" class="read-more"></a>
+											</div>
+										</div>
+										<div class="article-divider"></div>
+										<div class="part">
+											<div class="article">
+												<h1 class="title article-title">FRISO News Update!</h1>
+												<h2 class="title name">benny alexandra <span class="date">| 13 Maret 2015</span></h2>
+												<div class="img">
+													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/friso.png" class="box">
+												</div>
+												<p class="content-article">Dapatkan fakta tentang Single Process yang membuat produk Friso baik bagi pencernaan si Kecil, di sini!</p>
+												<a href="#"><img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/read-more.png" class="read-more"></a>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+
+						<!-- 1 Promo -->
+						<table>
+							<tr>
+								<td class="padding">
+									<div class="col-full box">
+										<div class="header promo">
+												Promo
+										</div>
+										<div class="col-full">
+
+												<div class="part border">
+													<h1 class="title pro">Beli Friso harga khusus, hanya di sini!</h1>
+													<div class="part box img-product">
+														<img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/produk1.png" alt="produk1">
+													</div>
+													<p class="content-article more-info"></p>
+													<div class="button-promo">
+														<button class="btn-primary btn-promo">Beli sekarang</button>
+													</div>
+												</div>
+
+											
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+
+						<!-- Tips -->
+						<table>
+							<tr>
+								<td class="padding">
+									<div class="col-full box">
+										<div class="header tips">
+												Tips untuk Mum
+										</div>										
+										<div class="part-tips">
+											<img alt="quotation1" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/quotation1.png">
+											<p class="quote">Anak yang tumbuh dengan kenangan indah cenderung lebih bahagia. Jadikan setiap momen bersama si Kecil lebih berarti dari sekarang.</p>
+											<div id="quotation2">
+												<img alt="quotation2" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/quotation2.png">
+											</div>
+											<!-- alternatif -->
+											<!-- <img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/quote.png"> -->
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</div>
+		</td>
+	</tr>
+</table>
+<!-- /body -->
+
+<!-- footer -->
+<table class="footer-wrap" bgcolor="#fff">
+	<tr>
+		<td></td>
+		<td class="container">
+			
+			<!-- content -->
+			<div class="content footer" style="background-color:#fff;">
+				<table>
+							<tr>							
+								<td class="padding footer-part" style="border-top: 1px dashed #019eff">
+									<div class="col-full">
+										<p class="friso">Friso  |  Friso Moments</p>
+
+										<p class="footer-content">Pesan ini ditujukan untuk pemilik alamat email <span class="friso email">Kemas.dwisatria@xmgravity.com</span>. Apakah benar email ini ditujukan untuk Anda? 
+										<br><br>
+										<a class="friso reg">Daftarkan diri Anda di sini</a>. Jika Anda tidak berkenan menerima pesan sejenis di kemudian hari, silahkan <a class="friso reg">Batalkan pendaftaran Anda di sini</a>. Email ini berisi link khusus untuk Anda! Sangat disarankan untuk berhati-hati saat mengirimkan email ini ke pihak lain, karena seluruh link yang terkait dengan email ini akan mencakup seluruh data pribadi yang tercantum dalam profil keluarga Anda, termasuk waktu melahirkan, tanggal lahir, dan nama-nama anggota keluarga.
+										<br><br>
+										Website Friso.co.id dan materi-materi publikasi terkait adalah untuk kepentingan informasi semata.
+										<br>
+										Jika Anda atau anak Anda memiliki masalah kesehatan, sangat disarankan untuk berkonsultasi langsung dengan dokter. </p>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<img alt="footer" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/footer.png">
+			</div>			
+		</td>
+	</tr>
+</table>
+<!-- /footer -->
+
+</body>
+</html>
