@@ -1,0 +1,11 @@
+style article title :
+style="text-decoration:none;color: #315ba7; font-style: normal; font-variant: normal; font-weight: bold; font-size: 23px; line-height: normal; font-family: Helvetica; margin: 0; padding: 0;"
+
+style read-more :
+style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 11px; line-height: 1.6; color: #eba503; display: block; text-transform: uppercase; text-decoration: none; margin: 0; padding: 0;"
+
+style promo title :
+style="color: #315ba7; min-height: 75px; font-style: normal; font-variant: normal; font-weight: normal; font-size: 20px; line-height: normal; font-family: Helvetica; margin: 0; padding: 0 0 15px; text-decoration:none;"
+
+style promo button :
+style="text-decoration:none; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 2; color: #FFF; font-weight:normal;"

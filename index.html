@@ -25,6 +25,7 @@ body {
 	-webkit-text-size-adjust: none;
 	width: 100%!important;
 	height: 100%;
+	display: block;
 }
 
 
@@ -33,6 +34,7 @@ body {
 ------------------------------------- */
 a {
 	color: #348eda;
+	display: block;
 }
 
 .btn-primary {
@@ -199,7 +201,12 @@ table {
 
 .title {
 	margin: 0;
+	color: #315ba7;
 	font: bold 28px Helvetica;
+}
+
+.part .article > a, .part > a {
+	text-decoration: none;
 	color: #315ba7;
 }
 
@@ -239,9 +246,27 @@ table {
 	color: #5d5c5a;
 }
 
-.read-more {
+.part .article .read-more {
 	margin-top: 10px;
 }
+
+.read-more .icon {
+	display: inline-block;
+}
+
+.part .article .read-more a {
+	color: #eba503;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#read-more-icon {
+	vertical-align: middle;
+	margin-left: 14px;
+	text-align: center;
+}
+
 
 .article-divider {
 	border-top: solid 1px #d8f8f8;
@@ -315,7 +340,7 @@ table {
 }
 
 .pro {
-	font-size: 21px;
+	font-size: 20px;
 	font-weight: normal;
 	padding-bottom: 15px;
 	min-height: 75px;
@@ -342,6 +367,7 @@ table {
 }
 
 .button-promo {
+	margin-top: 39px;
 	text-align: center;
 }
 
@@ -428,7 +454,7 @@ table {
 								<td class="padding">
 									<div class="col-full">
 										<div class="part" mc:edit="opening">
-											<h1 class="title">Hai, Ibu *|FNAME|* *|LNAME|*!</h1>
+											<a href="#"><h1 class="title">Hai, Ibu *|FNAME|* *|LNAME|*!</h1></a>
 											<p class="contents">Di usia aktifnya, si Kecil membutuhkan energi yang besar untuk mengenal dunia. Apakah Mum yakin sudah memberikan nutrisi sesuai dengan kebutuhan si Kecil?</p>
 										</div>
 									</div>
@@ -441,25 +467,39 @@ table {
 									<div class="col-full box">
 										<div class="part">
 											<div class="article">
-												<h1 class="title article-title" mc:edit="title-first-article">Larinya Tambah Kencang!</h1>
+												<a href="#"><h1 class="title article-title" mc:edit="title-first-article">Larinya Tambah Kencang!</h1></a>
 												<h2 class="title name" mc:edit="name-and-date">TIAVITA HERDIANA <span class="date">| 13 Maret 2015</span></h2>
 												<div class="img">
 													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/kid-running.png" class="box" mc:edit="img-first-article">
 												</div>
 												<p class="content-article" mc:edit="content-first-article">Meski bersemangat, ia juga bisa haus dan lelah. Perkuat imunitasnya dengan susu Friso yang mengandung Selenium dan Prebiotik, agar aktivitasnya tak terganggu. </p>
-												<a href="#"><img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/read-more.png" class="read-more"></a>
+												<div class="read-more">
+													<div class="icon">
+														<a href="#" mc:edit="read-more1">Read more</a>
+													</div>
+													<div class="icon">
+														<img src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
+													</div>
+												</div>
 											</div>
 										</div>
 										<div class="article-divider"></div>
 										<div class="part">
 											<div class="article">
-												<h1 class="title article-title" mc:edit="title-second-article">FRISO News Update!</h1>
+												<a href="#"><h1 class="title article-title" mc:edit="title-second-article">FRISO News Update!</h1></a>
 												<h2 class="title name" mc:edit="name-and-date-sec">benny alexandra <span class="date">| 13 Maret 2015</span></h2>
 												<div class="img">
 													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/friso.png" class="box" mc:edit="img-second-article">
 												</div>
 												<p class="content-article" mc:edit="content-second-article">Dapatkan fakta tentang Single Process yang membuat produk Friso baik bagi pencernaan si Kecil, di sini!</p>
-												<a href="#"><img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/read-more.png" class="read-more"></a>
+												<div class="read-more">
+													<div class="icon">
+														<a href="#" mc:edit="read-more2">Read more</a>
+													</div>
+													<div class="icon">
+														<img src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -478,25 +518,23 @@ table {
 										<div class="col-full">
 											<div class="col-half">
 												<div class="part border col-promo">
-													<h1 class="title pro" mc:edit="title-first-promo">Beli Friso harga khusus, hanya di sini!</h1>
-													<div class="part box img-product">
-														<img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/produk1.png" alt="produk1" mc:edit="img-first-promo">
+													<a href="#"><h1 class="title pro" mc:edit="title-first-promo">Beli Friso harga khusus, hanya di sini!</h1></a>
+													<div class="img-product">
+														<img src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/de5ffc95-5cc9-4282-a2e5-80fa2434ea18.png" alt="produk1" mc:edit="img-first-promo">
 													</div>
-													<p class="content-article more-info"></p>
 													<div class="button-promo">
-														<a class="btn-primary btn-promo">Beli sekarang</a>
+														<a href="#" class="btn-primary btn-promo" mc:edit="btn-promo1">Beli sekarang</a>
 													</div>
 												</div>
 											</div>
 											<div class="col-half">
 												<div class="part col-promo">
-													<h1 class="title pro" mc:edit="title-second-promo">Tukarkan poin di setiap pembelian susu Friso di sini!</h1>
-													<div class="part box img-product">
-														<img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/produk2.png" alt="produk2" mc:edit="img-second-promo">
+													<a href="#"><h1 class="title pro" mc:edit="title-second-promo">Tukarkan poin di setiap pembelian susu Friso di sini!</h1></a>
+													<div class="img-product">
+														<img src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/00434ade-0a64-4338-842f-4407f1845c5b.png" alt="produk2" mc:edit="img-second-promo">
 													</div>
-													<p class="content-article more-info" mc:edit="poin">Poin Mum sampai saat ini: <span class="nominal">3,609</span></p>
 													<div class="button-promo">
-														<a class="btn-primary btn-promo">Info lebih lanjut</a>
+														<a class="btn-primary btn-promo" mc:edit="btn-promo2">Info lebih lanjut</a>
 													</div>		
 												</div>
 											</div>

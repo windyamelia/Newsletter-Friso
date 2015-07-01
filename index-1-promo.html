@@ -189,6 +189,12 @@ table {
 	color: #315ba7;
 }
 
+.part .article a, .part a {
+	text-decoration: none;
+	color: #315ba7;
+	font: bold 28px Helvetica;
+}
+
 .article-title {
 	font-size: 23px;
 }
@@ -225,9 +231,22 @@ table {
 	color: #5d5c5a;
 }
 
-.read-more {
+.part .article .read-more {
 	margin-top: 10px;
 }
+
+.part .article .read-more a {
+	color: #eba503;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#read-more-icon {
+	vertical-align: bottom;
+	margin-left: 14px;
+}
+
 
 .article-divider {
 	border-top: solid 1px #d8f8f8;
@@ -304,6 +323,7 @@ table {
 }
 
 .button-promo {
+	margin-top: 39px;
 	text-align: center;
 }
 
@@ -390,7 +410,7 @@ table {
 								<td class="padding">
 									<div class="col-full">
 										<div class="part">
-											<h1 class="title">Hai, Ibu Faradita Nelwan!</h1>
+											<a href="#"><h1 class="title">Hai, Ibu Faradita Nelwan!</h1></a>
 											<p class="contents">Di usia aktifnya, si Kecil membutuhkan energi yang besar untuk mengenal dunia. Apakah Mum yakin sudah memberikan nutrisi sesuai dengan kebutuhan si Kecil?</p>
 										</div>
 									</div>
@@ -403,25 +423,29 @@ table {
 									<div class="col-full box">
 										<div class="part">
 											<div class="article">
-												<h1 class="title article-title">Larinya Tambah Kencang!</h1>
+												<a href="#"><h1 class="title article-title">Larinya Tambah Kencang!</h1></a>
 												<h2 class="title name">TIAVITA HERDIANA <span class="date">| 13 Maret 2015</span></h2>
 												<div class="img">
 													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/kid-running.png" class="box">
 												</div>
 												<p class="content-article">Meski bersemangat, ia juga bisa haus dan lelah. Perkuat imunitasnya dengan susu Friso yang mengandung Selenium dan Prebiotik, agar aktivitasnya tak terganggu. </p>
-												<a href="#"><img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/read-more.png" class="read-more"></a>
+												<div class="read-more">
+													<a href="#">Read more<img src="images/read-more-icon.png" id="read-more-icon"></a>
+												</div>
 											</div>
 										</div>
 										<div class="article-divider"></div>
 										<div class="part">
 											<div class="article">
-												<h1 class="title article-title">FRISO News Update!</h1>
+												<a href="#"><h1 class="title article-title">FRISO News Update!</h1></a>
 												<h2 class="title name">benny alexandra <span class="date">| 13 Maret 2015</span></h2>
 												<div class="img">
 													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/friso.png" class="box">
 												</div>
 												<p class="content-article">Dapatkan fakta tentang Single Process yang membuat produk Friso baik bagi pencernaan si Kecil, di sini!</p>
-												<a href="#"><img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/read-more.png" class="read-more"></a>
+												<div class="read-more">
+													<a href="#">Read more<img src="images/read-more-icon.png" id="read-more-icon"></a>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -440,11 +464,10 @@ table {
 										<div class="col-full">
 
 												<div class="part border">
-													<h1 class="title pro">Beli Friso harga khusus, hanya di sini!</h1>
+													<a href="#"><h1 class="title pro">Beli Friso harga khusus, hanya di sini!</h1></a>
 													<div class="part box img-product">
 														<img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/produk1.png" alt="produk1">
 													</div>
-													<p class="content-article more-info"></p>
 													<div class="button-promo">
 														<button class="btn-primary btn-promo">Beli sekarang</button>
 													</div>

@@ -33,6 +33,7 @@ body {
 ------------------------------------- */
 a {
 	color: #348eda;
+	display: block;
 }
 
 .btn-primary {
@@ -146,14 +147,22 @@ ul li, ol li {
 		Nuke it from orbit. It's the only way to be sure.
 ------------------------------------------------------ */
 
-/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */]
+
 .container {
 	display: block!important;
-	width: 600px!important;
+	width: 600px;
 	margin: 0 auto!important; /* makes it centered */
 	clear: both!important;
 	background: url('http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/bg.png');
 }
+
+/*@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
+	.container {
+		width: 360px !important;
+	}
+}*/
+
 
 /* Set the padding on the td rather than the div for Outlook compatibility */
 .body-wrap .container {
@@ -166,6 +175,12 @@ ul li, ol li {
 	margin: 0 auto;
 	display: block;
 }
+
+/*@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
+	.content {
+		width: 360px !important;
+	}
+}*/
 
 /* Let's make sure tables in the content area are 100% wide */
 .content table {
@@ -185,7 +200,12 @@ table {
 
 .title {
 	margin: 0;
+	color: #315ba7;
 	font: bold 28px Helvetica;
+}
+
+.part .article > a, .part > a {
+	text-decoration: none;
 	color: #315ba7;
 }
 
@@ -225,9 +245,27 @@ table {
 	color: #5d5c5a;
 }
 
-.read-more {
+.part .article .read-more {
 	margin-top: 10px;
 }
+
+.read-more .icon {
+	display: inline-block;
+}
+
+.part .article .read-more a {
+	color: #eba503;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+#read-more-icon {
+	vertical-align: middle;
+	margin-left: 14px;
+	text-align: center;
+}
+
 
 .article-divider {
 	border-top: solid 1px #d8f8f8;
@@ -254,8 +292,25 @@ table {
 .col-half {
 	width: 50%;
 	float: left;
-	position: relative;
 }
+
+/*@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
+	div[class="col-half"] {
+		width: 100% !important;
+		float: left !important;
+	}
+}*/
+
+.border {
+	border-right: solid 1px #d8f8f8;
+}
+
+/*@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
+	div[class="border"] {
+		border-right: solid 1px #fff !important;
+		border-bottom: solid 1px #d8f8f8 !important;
+	}
+}*/
 
 /* promo */
 .promo {
@@ -263,7 +318,7 @@ table {
 }
 
 .padding .col-full .col-promo {
-	height: 341px;
+	min-height: 341px;
 }
 
 .padding .col-full.promo-content {
@@ -271,12 +326,12 @@ table {
 	margin-right: -15px;
 }
 
-#right {
-	float: right;
+.img-product {
+	text-align: center;
 }
 
-.border {
-	border-right: solid 1px #d8f8f8;
+#right {
+	float: right;
 }
 
 #article-promo {
@@ -284,17 +339,23 @@ table {
 }
 
 .pro {
-	font-size: 21px;
+	font-size: 20px;
 	font-weight: normal;
 	padding-bottom: 15px;
 	min-height: 75px;
 }
 
+/*@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
+	.pro {
+		min-height: 40px;
+	}
+}
+*/
 .more-info {
 	padding: 10px 0;
 	text-align: center;
 	margin-bottom: 0;
-	min-height: 27px;
+	min-height: 25px;
 }
 
 .nominal {
@@ -305,6 +366,7 @@ table {
 }
 
 .button-promo {
+	margin-top: 39px;
 	text-align: center;
 }
 
@@ -390,8 +452,8 @@ table {
 							<tr>
 								<td class="padding">
 									<div class="col-full">
-										<div class="part">
-											<h1 class="title">Hai, Ibu Faradita Nelwan!</h1>
+										<div class="part" mc:edit="opening">
+											<a href="#"><h1 class="title">Hai, Ibu *|FNAME|* *|LNAME|*!</h1></a>
 											<p class="contents">Di usia aktifnya, si Kecil membutuhkan energi yang besar untuk mengenal dunia. Apakah Mum yakin sudah memberikan nutrisi sesuai dengan kebutuhan si Kecil?</p>
 										</div>
 									</div>
@@ -404,32 +466,65 @@ table {
 									<div class="col-full box">
 										<div class="part">
 											<div class="article">
-												<h1 class="title article-title">Larinya Tambah Kencang!</h1>
-												<h2 class="title name">TIAVITA HERDIANA <span class="date">| 13 Maret 2015</span></h2>
+												<a href="#"><h1 class="title article-title" mc:edit="title-first-article">Larinya Tambah Kencang!</h1></a>
+												<h2 class="title name" mc:edit="name-and-date">TIAVITA HERDIANA <span class="date">| 13 Maret 2015</span></h2>
 												<div class="img">
-													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/kid-running.png" class="box">
+													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/kid-running.png" class="box" mc:edit="img-first-article">
 												</div>
-												<p class="content-article">Meski bersemangat, ia juga bisa haus dan lelah. Perkuat imunitasnya dengan susu Friso yang mengandung Selenium dan Prebiotik, agar aktivitasnya tak terganggu. </p>
-												<a href="#"><img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/read-more.png" class="read-more"></a>
+												<p class="content-article" mc:edit="content-first-article">Meski bersemangat, ia juga bisa haus dan lelah. Perkuat imunitasnya dengan susu Friso yang mengandung Selenium dan Prebiotik, agar aktivitasnya tak terganggu. </p>
+												<div class="read-more">
+													<div class="icon">
+														<a href="#" mc:edit="read-more1">Read more</a>
+													</div>
+													<div class="icon">
+														<img src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
+													</div>
+												</div>
 											</div>
 										</div>
 										<div class="article-divider"></div>
 										<div class="part">
 											<div class="article">
-												<h1 class="title article-title">FRISO News Update!</h1>
-												<h2 class="title name">benny alexandra <span class="date">| 13 Maret 2015</span></h2>
+												<a href="#"><h1 class="title article-title" mc:edit="title-second-article">FRISO News Update!</h1></a>
+												<h2 class="title name" mc:edit="name-and-date-sec">benny alexandra <span class="date">| 13 Maret 2015</span></h2>
 												<div class="img">
-													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/friso.png" class="box">
+													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/friso.png" class="box" mc:edit="img-second-article">
 												</div>
-												<p class="content-article">Dapatkan fakta tentang Single Process yang membuat produk Friso baik bagi pencernaan si Kecil, di sini!</p>
-												<a href="#"><img src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/read-more.png" class="read-more"></a>
+												<p class="content-article" mc:edit="content-second-article">Dapatkan fakta tentang Single Process yang membuat produk Friso baik bagi pencernaan si Kecil, di sini!</p>
+												<div class="read-more">
+													<div class="icon">
+														<a href="#" mc:edit="read-more2">Read more</a>
+													</div>
+													<div class="icon">
+														<img src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="article-divider"></div>
+										<div class="part">
+											<div class="article">
+												<a href="#"><h1 class="title article-title" mc:edit="title-third-article">FRISO News Update!</h1></a>
+												<h2 class="title name" mc:edit="name-and-date-thi">benny alexandra <span class="date">| 13 Maret 2015</span></h2>
+												<div class="img">
+													<img alt="kid-running" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/friso.png" class="box" mc:edit="img-third-article">
+												</div>
+												<p class="content-article" mc:edit="content-third-article">Dapatkan fakta tentang Single Process yang membuat produk Friso baik bagi pencernaan si Kecil, di sini!</p>
+												<div class="read-more">
+													<div class="icon">
+														<a href="#" mc:edit="read-more3">Read more</a>
+													</div>
+													<div class="icon">
+														<img src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</td>
 							</tr>
 						</table>
-						
+
 						<!-- Tips -->
 						<table>
 							<tr>
@@ -440,7 +535,7 @@ table {
 										</div>										
 										<div class="part-tips">
 											<img alt="quotation1" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/quotation1.png">
-											<p class="quote">Anak yang tumbuh dengan kenangan indah cenderung lebih bahagia. Jadikan setiap momen bersama si Kecil lebih berarti dari sekarang.</p>
+											<p class="quote" mc:edit="quotation">Anak yang tumbuh dengan kenangan indah cenderung lebih bahagia. Jadikan setiap momen bersama si Kecil lebih berarti dari sekarang.</p>
 											<div id="quotation2">
 												<img alt="quotation2" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/quotation2.png">
 											</div>
@@ -476,7 +571,7 @@ table {
 
 										<p class="footer-content">Pesan ini ditujukan untuk pemilik alamat email <span class="friso email">Kemas.dwisatria@xmgravity.com</span>. Apakah benar email ini ditujukan untuk Anda? 
 										<br><br>
-										<a class="friso reg">Daftarkan diri Anda di sini</a>. Jika Anda tidak berkenan menerima pesan sejenis di kemudian hari, silahkan <a class="friso reg">Batalkan pendaftaran Anda di sini</a>. Email ini berisi link khusus untuk Anda! Sangat disarankan untuk berhati-hati saat mengirimkan email ini ke pihak lain, karena seluruh link yang terkait dengan email ini akan mencakup seluruh data pribadi yang tercantum dalam profil keluarga Anda, termasuk waktu melahirkan, tanggal lahir, dan nama-nama anggota keluarga.
+										<a class="friso reg">Daftarkan diri Anda di sini</a>. Jika Anda tidak berkenan menerima pesan sejenis di kemudian hari, silahkan <a href="*|UNSUB|*" class="friso reg">Batalkan pendaftaran Anda di sini</a>. Email ini berisi link khusus untuk Anda! Sangat disarankan untuk berhati-hati saat mengirimkan email ini ke pihak lain, karena seluruh link yang terkait dengan email ini akan mencakup seluruh data pribadi yang tercantum dalam profil keluarga Anda, termasuk waktu melahirkan, tanggal lahir, dan nama-nama anggota keluarga.
 										<br><br>
 										Website Friso.co.id dan materi-materi publikasi terkait adalah untuk kepentingan informasi semata.
 										<br>
@@ -485,7 +580,7 @@ table {
 								</td>
 							</tr>
 						</table>
-						<img alt="footer" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/footer.png">
+						<img alt="footer" src="http://www.friso.co.id/themes/frontend/frisoWebsite/assets/images/email/footer.png" mc:edit="footer">
 			</div>			
 		</td>
 	</tr>
