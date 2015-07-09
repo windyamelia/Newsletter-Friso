@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Friso</title>
-<style>
+<style type="text/css">
 /* -------------------------------------
 		GLOBAL
 ------------------------------------- */
@@ -25,6 +25,7 @@ body {
 	-webkit-text-size-adjust: none;
 	width: 100%!important;
 	height: 100%;
+	display: block;
 }
 
 
@@ -262,7 +263,7 @@ table {
 
 #read-more-icon {
 	vertical-align: middle;
-	margin-left: 14px;
+	margin-left: 5px;
 	text-align: center;
 }
 
@@ -355,7 +356,7 @@ table {
 	padding: 10px 0;
 	text-align: center;
 	margin-bottom: 0;
-	min-height: 25px;
+	min-height: 50px;
 }
 
 .nominal {
@@ -366,7 +367,7 @@ table {
 }
 
 .button-promo {
-	margin-top: 39px;
+	/*margin-top: 39px;*/
 	text-align: center;
 }
 
@@ -419,10 +420,21 @@ table {
 .padding .col-full .friso {
 	font-size: 15px;
 	color: #02639f;
+	display: inline;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.padding .col-full .divider {
+	color: #ddb14d;
+	font-weight: bold;
+	margin: 0 3px;
+	text-decoration: none;
 }
 
 .padding .col-full .email {
 	font-size: 12px;
+	text-decoration: none;
 }
 
 .padding .col-full .reg {
@@ -439,7 +451,6 @@ table {
 <!-- body -->
 <table class="body-wrap" bgcolor="#fff">
 	<tr>
-		<td></td>
 		<td class="container" bgcolor="#faffff">
 
 			<!-- content -->
@@ -477,7 +488,7 @@ table {
 														<a href="#" mc:edit="read-more1">Read more</a>
 													</div>
 													<div class="icon">
-														<img src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
+														<img alt="read-more-icon" src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
 													</div>
 												</div>
 											</div>
@@ -496,7 +507,7 @@ table {
 														<a href="#" mc:edit="read-more2">Read more</a>
 													</div>
 													<div class="icon">
-														<img src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
+														<img alt="read-more-icon" src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
 													</div>
 												</div>
 											</div>
@@ -515,7 +526,7 @@ table {
 														<a href="#" mc:edit="read-more3">Read more</a>
 													</div>
 													<div class="icon">
-														<img src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
+														<img alt="read-more-icon" src="https://gallery.mailchimp.com/e983a71ffa2df74be01e80c29/images/83f831aa-3bfe-49bd-93dd-a34915982a7c.png" id="read-more-icon">
 													</div>
 												</div>
 											</div>
@@ -558,7 +569,6 @@ table {
 <!-- footer -->
 <table class="footer-wrap" bgcolor="#fff">
 	<tr>
-		<td></td>
 		<td class="container">
 			
 			<!-- content -->
@@ -567,15 +577,9 @@ table {
 							<tr>							
 								<td class="padding footer-part" style="border-top: 1px dashed #019eff">
 									<div class="col-full">
-										<p class="friso">Friso  |  Friso Moments</p>
+										<p><a href="http://www.friso.co.id" target="_blank" class="friso">Friso</a><span class="friso divider"> | </span><a href="http://www.friso.co.id/moments" target="_blank" class="friso">Friso Moments</a></p>
 
-										<p class="footer-content">Pesan ini ditujukan untuk pemilik alamat email <span class="friso email">Kemas.dwisatria@xmgravity.com</span>. Apakah benar email ini ditujukan untuk Anda? 
-										<br><br>
-										<a class="friso reg">Daftarkan diri Anda di sini</a>. Jika Anda tidak berkenan menerima pesan sejenis di kemudian hari, silahkan <a href="*|UNSUB|*" class="friso reg">Batalkan pendaftaran Anda di sini</a>. Email ini berisi link khusus untuk Anda! Sangat disarankan untuk berhati-hati saat mengirimkan email ini ke pihak lain, karena seluruh link yang terkait dengan email ini akan mencakup seluruh data pribadi yang tercantum dalam profil keluarga Anda, termasuk waktu melahirkan, tanggal lahir, dan nama-nama anggota keluarga.
-										<br><br>
-										Website Friso.co.id dan materi-materi publikasi terkait adalah untuk kepentingan informasi semata.
-										<br>
-										Jika Anda atau anak Anda memiliki masalah kesehatan, sangat disarankan untuk berkonsultasi langsung dengan dokter. </p>
+										<p class="footer-content">Pesan ini ditujukan untuk pemilik alamat email <span class="friso email">*|EMAIL|*</span>. Apakah benar email ini ditujukan untuk Anda?<br><br>Jika Anda tidak berkenan menerima pesan sejenis di kemudian hari, silahkan <a href="*|UNSUB|*" class="friso reg">Batalkan pendaftaran Anda di sini</a>. Email ini berisi link khusus untuk Anda! Sangat disarankan untuk berhati-hati saat mengirimkan email ini ke pihak lain, karena seluruh link yang terkait dengan email ini akan mencakup seluruh data pribadi yang tercantum dalam profil keluarga Anda, termasuk waktu melahirkan, tanggal lahir, dan nama-nama anggota keluarga.<br><br>Website Friso.co.id dan materi-materi publikasi terkait adalah untuk kepentingan informasi semata.<br>Jika Anda atau anak Anda memiliki masalah kesehatan, sangat disarankan untuk berkonsultasi langsung dengan dokter. </p>
 									</div>
 								</td>
 							</tr>
